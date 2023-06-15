@@ -1,0 +1,46 @@
+DATABASE         TABLE_SCHEMA    TABLE_NAME    COLUMN_NAME       IS_NULLABLE DATA_TYPE                     COLUMN_KEY PRIVILEGES
+localhost:3306   A2_distkv736815 AMENITY       AMENITY_NAME      NO          varchar(40)                   PRIMARY    select,insert,update,references
+localhost:3306   A2_distkv736815 AMENITY       AMENITY_DESCRIPTION
+                                                                 YES         mediumtext                               select,insert,update,references
+localhost:3306   A2_distkv736815 PARK          PARK_ID           NO          int                           PRIMARY    select,insert,update,references
+localhost:3306   A2_distkv736815 PARK          PARK_NAME         NO          varchar(45)                              select,insert,update,references
+localhost:3306   A2_distkv736815 PARK          DESCRIPTION       YES         mediumtext                               select,insert,update,references
+localhost:3306   A2_distkv736815 PARK          PARK_TYPE         YES         enum('LAKE','BEACH','FOREST')            select,insert,update,references
+                                                                             enum('HALIFAX
+                                                                             METRO','EASTERN
+                                                                             SHORE','CAPE BRETON
+                                                                             ISLAND','NORTHUMBERLAND
+                                                                             SHORE','THE BAY OF FUNDY &
+                                                                             ANAPOLIS VALLEY','YARMOTH
+localhost:3306 A2_distkv736815   PARK         PARK_REGION         YES         & ACADIAN SHORES')                      select,insert,update,references
+localhost:3306 A2_distkv736815   PARK         MANAGER_EMPLOYEE_ID YES         int                           MUL       select,insert,update,references
+localhost:3306 A2_distkv736815   PARK_AMENITY PARK_PARK_ID        NO          int                           PRIMARY   select,insert,update,references
+localhost:3306 A2_distkv736815   PARK_AMENITY AMENITY_AMENITY_NAME NO          varchar(40)                  PRIMARY   select,insert,update,references
+34.142.59:3306 A2_distkv736815   EMPLOYEE     EMPLOYEE_ADDRESS    NO         varchar(100)                            select,insert,update,references
+34.142.59:3306 A2_distkv736815   EMPLOYEE     EMPLOYEE_EMAIL      NO         varchar(45)                             select,insert,update,references
+34.142.59:3306 A2_distkv736815   EMPLOYEE     EMPLOYEE_FNAME      NO         varchar(45)                             select,insert,update,references
+34.142.59:3306 A2_distkv736815   EMPLOYEE     EMPLOYEE_ID         NO         int                           PRIMARY   select,insert,update,references
+34.142.59:3306 A2_distkv736815   EMPLOYEE     EMPLOYEE_LNAME      NO         varchar(45)                             select,insert,update,references
+34.142.59:3306 A2_distkv736815   EMPLOYEE     EMPLOYEE_ROLE       NO         varchar(45)                             select,insert,update,references
+34.142.59:3306 A2_distkv736815   EMPLOYEE     PARK_ID             YES        int                           MUL       select,insert,update,references
+34.142.59:3306 A2_distkv736815   ENQUIRY      ENQUIRER_CITY       YES        varchar(45)                             select,insert,update,references
+34.142.59:3306 A2_distkv736815   ENQUIRY      ENQUIRER_EMAIL      NO         varchar(45)                             select,insert,update,references
+34.142.59:3306 A2_distkv736815   ENQUIRY      ENQUIRER_FNAME      NO         varchar(45)                             select,insert,update,references
+34.142.59:3306 A2_distkv736815   ENQUIRY      ENQUIRER_LNAME      NO         varchar(45)                             select,insert,update,references
+34.142.59:3306 A2_distkv736815   ENQUIRY      ENQUIRER_MESSAGE    NO         mediumtext                              select,insert,update,references
+34.142.59:3306 A2_distkv736815   ENQUIRY      ENQUIRER_PHONE      YES        varchar(15)                             select,insert,update,references
+34.142.59:3306 A2_distkv736815   ENQUIRY      ENQUIRER_PROVINCE   YES        varchar(45)                             select,insert,update,references
+34.142.59:3306 A2_distkv736815   ENQUIRY      ENQUIRY_ID          NO         int                           PRIMARY   select,insert,update,references
+34.142.59:3306 A2_distkv736815   ENQUIRY      PARK_ID             NO         int                           MUL       select,insert,update,references
+34.142.59:3306 A2_distkv736815   EVENT        END_TIME            YES        varchar(45)                             select,insert,update,references
+34.142.59:3306 A2_distkv736815   EVENT        EVENT_ID            NO         int                           PRIMARY   select,insert,update,references
+34.142.59:3306 A2_distkv736815   EVENT        EVENT_NAME          YES        varchar(45)                             select,insert,update,references
+34.142.59:3306 A2_distkv736815   EVENT        HOST_HOST_ID        NO         int                           MUL       select,insert,update,references
+34.142.59:3306 A2_distkv736815   EVENT        PARK_ID             NO         int                           MUL       select,insert,update,references
+34.142.59:3306 A2_distkv736815   EVENT        START_TIME          YES        varchar(45)                             select,insert,update,references
+34.142.59:3306 A2_distkv736815   HOST         HOST_ADDRESS        YES        varchar(45)                             select,insert,update,references
+34.142.59:3306 A2_distkv736815   HOST         HOST_CONTACT        YES        varchar(15)                             select,insert,update,references
+34.142.59:3306 A2_distkv736815   HOST         HOST_EMAIL          YES        varchar(45)                             select,insert,update,references
+34.142.59:3306 A2_distkv736815   HOST         HOST_ID             NO         int                           PRIMARY   select,insert,update,references
+34.142.59:3306 A2_distkv736815   HOST         HOST_NAME           YES        varchar(45)                             select,insert,update,references
+
